@@ -1,9 +1,9 @@
 /**
  * @file    js/global.js
  *
- * copyright (c) 2006-2009 Frank Hellenkamp [jonas@depagecms.net]
+ * copyright (c) 2006-2012 Frank Hellenkamp [jonas@depage.net]
  *
- * @author    Frank Hellenkamp [jonas@depagecms.net]
+ * @author    Frank Hellenkamp [jonas@depage.net]
  */
 
 // global helpers
@@ -161,7 +161,7 @@ function replaceFlashContent() {
 // {{{ replaceInteractiveContent()
 function replaceInteractiveContent() {
     // {{{ get language from content tag in header
-    var lang = $("meta[name = 'Content-Language']")[0].content;
+    var lang = $("html").attr("lang");
     // }}}
     // {{{ add click event for teaser
     $(".teaser").click( function() {

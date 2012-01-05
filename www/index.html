@@ -1,64 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <!-- {{{ head -->
     <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         
 	<title>Title</title>
 
-	<link rel="stylesheet" type="text/css" href="lib/global/css/global.css">
-	<link rel="stylesheet" type="text/css" href="lib/global/css/colors.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="lib/global/css/screen.css">
-	<link rel="stylesheet" type="text/css" media="print" href="lib/global/css/print.css">
-	<link rel="stylesheet" type="text/css" media="handheld" href="lib/global/css/handheld.css">
-
-	<script type="text/javascript" src="lib/global/js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="lib/global/js/global.js"></script>
-
-        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="lib/global/favicon.ico">
-        <link rel="shortcut icon" type="image/png" href="lib/global/favicon.png" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    
 	<meta name="robots" content="index,follow">
 	<meta name="revisit-after" content="1 day">
+        <!--[if IE]>
+        <meta http-equiv="imagetoolbar" content="false">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="cleartype" content="on">
+        <![endif]-->
 
 	<meta name="description" content="">
 	<meta name="author" content="Frank Hellenkamp">
 	<meta name="generator" content="depage::cms">
-	<meta name="Content-Language" content="de">
 	<meta name="keywords" content="">
+
+        <!--[if IE]><![endif]-->
+	<link rel="stylesheet" type="text/css" href="lib/global/css/global.css">
+	<link rel="stylesheet" type="text/css" href="lib/global/css/colors.css">
+	<link rel="stylesheet" type="text/css" media="print" href="lib/global/css/print.css">
+        <!--[if (gt IE 8) | (IEMobile)]><!--><link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="lib/global/css/mobile.css"><!--<![endif]-->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script><script>!window.jQuery && document.write('<script src="lib/global/js/jquery-1.4.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="lib/global/js/global.js"></script>
+        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><script>!window.html5 && document.write('<script src="lib/global/js/html5.js"><\/script>')</script><![endif]-->
+
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="lib/global/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="lib/global/favicon.png">
     </head>
     <!-- }}} -->
     <body>
+        <small class="hidden"><a href="#content">Jump to content</a></small>
         <!-- {{{ header -->
-        <div id="header">
-            <div id="middle"><a href="#navigation" class="hidden">Zur Navigation springen</a></div>
+        <header>
             <div id="logo">
-                <a href="index.html"><img class="flash_repl__" src="lib/logo.png?link=index.html" alt="logo"></a>
-                <span class="slogan"></span>
+                <a href="index.html"><img src="lib/global/logo.png" alt="logo"></a>
+                <span class="slogan">slogan</span>
             </div>
-        </div>
+        </header>
         <!-- }}} -->
-        <div id="content">
-            <div id="mainheadline">
-                <h1>mainheadline</h1>
-            </div>
-            <!-- {{{ section -->
-            <div class="section first">
-                <h2>Headline h2<br>zweite Zeile</h2>
-                <div class="date">
-                    <span class="day">28</span> <span class="month">Sep</span> <span class="year">08</span>
-                </div>
-                <div class="big">
-                    <img src="" alt="Bild">
-                </div>
-                <p>At vero eos et accusam et justo duo <a href="http://www.google.de">this is a link</a> dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore mag na aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <a class="more" href="#">__mehr</a></p>
-            </div>
-            <!-- }}} -->
-        </div>
         <!-- {{{ navigation -->
-        <div id="navigation">
-            <h2 class="invisible">Navigation</h2>
+        <nav>
+            <h2 class="hidden">Navigation</h2>
             <ul> 
                 <li><a href="#" class="parent_of_active">parent of active</a>
                     <ul> 
@@ -72,12 +61,33 @@
                 <li><a href="#">navpoint</a></li>
                 <li><a href="#">navpoint</a></li>
             </ul>
-        </div>
+        </nav>
         <!-- }}} -->
-        <!-- {{{ footer -->
-        <div id="footer">
-            <p><small>powered by <a href="http://www.depagecms.net">depage::cms</a></small></p>
+        <div id="content">
+            <!-- {{{ section -->
+            <section class="first">
+                <hgroup class="title">
+                    <h1>title</h1>
+                    <h2>subtitle</h2>
+                </hgroup>
+
+                <h1>Headline h2<br>zweite Zeile</h1>
+                <div class="date">
+                    <span class="day">28</span> <span class="month">Sep</span> <span class="year">08</span>
+                </div>
+                <div class="big">
+                    <img src="" alt="Bild">
+                </div>
+                <p>At vero eos et accusam et justo duo <a href="http://www.google.de">this is a link</a> dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore mag na aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <a class="more" href="#">__mehr</a></p>
+            </section>
+            <!-- }}} -->
         </div>
+        <!-- {{{ footer -->
+        <footer>
+            <p>&copy; 2012 Frank Hellenkamp</p>
+            <p><small class="powered">powered by <a href="http://www.depagecms.net">depage::cms</a></small></p>
+        </footer>
         <!-- }}} -->
     </body>
     <!-- vim:set ft=html sw=4 sts=4 fdm=marker : -->
