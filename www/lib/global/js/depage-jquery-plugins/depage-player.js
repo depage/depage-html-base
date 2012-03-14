@@ -177,7 +177,6 @@
         };
         // }}}
         
-        
         /**
          * Namespace HTML5 funcitons
          */
@@ -414,10 +413,11 @@
              * @return void
              */
             insertPlayer : function() {
-                
-                var url = $indicator[0].href;
+                // get absolute url from source attribute with mp4-type
+                var url = $("<a href=\"" + $('source:[type="video/mp4"]', video).attr("src") + "\"></a>")[0].toString()
                 
                 var flashParams = {
+                    rand: Math.random(),
                     id : base.options.playerId
                 };
                 if (window.console && base.options.debug) {
@@ -436,55 +436,13 @@
                 // use innerHTML for IE < 9 otherwise player breaks!!
                 $wrapper[0].innerHTML = html.plainhtml;
                 
-                window.setPlayerVar = base.flash.setPlayerVar;
-                
                 base.player.initialized = true;
                 
                 base.player.load(url);
-            },
-            // }}}
-            
-            // {{{ setPlayerVar()
-            /**
-             * Flash Set Player Var
-             * 
-             * This is a callback for the flash player.
-             * 
-             * @param action
-             * @param value
-             * 
-             * @return void
-             */
-            setPlayerVar : function(playerId, action, value) {
-                var instance = $.depage.player.instances[playerId];
-                
-                instance.player[action] = value;
-                
-                switch (action) {
-                    case "paused" : 
-                        if (instance.player.paused){
-                            instance.pause();
-                        } else {
-                            instance.play();
-                        }
-                        break;
-                        
-                    case "currentTime" :
-                        instance.setCurrentTime(base.player.currentTime);
-                        break;
-                        
-                    case "percentLoaded" :
-                        instance.percentLoaded(base.player.percentLoaded);
-                        break;
-                        
-                    case "duration" :
-                        instance.duration();
-                        break;
-                }
             }
+            // }}}
         };
-        // }}}
-        
+            
         // {{{ resize()
         /**
          * Resize Player
@@ -912,6 +870,46 @@
         
         return base;
     };
+    
+    // {{{ setPlayerVar()
+    /**
+     * Flash Set Player Var
+     * 
+     * This is a callback for the flash player.
+     * 
+     * @param action
+     * @param value
+     * 
+     * @return void
+     */
+    $.depage.player.setPlayerVar = function(playerId, action, value) {
+        var instance = $.depage.player.instances[playerId];
+        
+        instance.player[action] = value;
+        
+        switch (action) {
+            case "paused" : 
+                if (instance.player.paused){
+                    instance.pause();
+                } else {
+                    instance.play();
+                }
+                break;
+                
+            case "currentTime" :
+                instance.setCurrentTime(instance.player.currentTime);
+                break;
+                
+            case "percentLoaded" :
+                instance.percentLoaded(instance.player.percentLoaded);
+                break;
+                
+            case "duration" :
+                instance.duration();
+                break;
+        }
+    }
+// }}}
 
     /**
      * instances
