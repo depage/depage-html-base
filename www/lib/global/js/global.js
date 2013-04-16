@@ -6,8 +6,10 @@
  * @author    Frank Hellenkamp [jonas@depage.net]
  */
 
-;var projectName = (function() {
+var projectName = (function() {
     "use strict";
+    /*jslint browser: true*/
+    /*global $:false */
 
     var lang = $('html').attr('lang');
 
@@ -28,7 +30,7 @@
             localJS.setupVarious();
         },
         // }}}
-        // {{{ setupVarious
+        // {{{ setup
         setupVarious: function() {
             // add click event for teaser
             $(".teaser").click( function() {
