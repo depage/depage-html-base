@@ -31,6 +31,7 @@
     * html & { height: 1px }
 }
 // }}}
+
 // {{{ radius
 @mixin radius($radius, $vert: "", $horiz: "") {
     $other: "";
@@ -54,6 +55,21 @@
     border-#{$other}radius: $radius;
 }
 // }}}
+// {{{ box-shadow
+@mixin box-shadow($properties) {
+    -webkit-box-shadow: $properties;
+    -moz-box-shadow: $properties;
+    box-shadow: $properties;
+}
+// }}}
+// {{{ text-shadow
+@mixin text-shadow($properties) {
+    -webkit-text-shadow: $properties;
+    -moz-text-shadow: $properties;
+    text-shadow: $properties;
+}
+// }}}
+
 // {{{ custom-bullet
 @mixin custom-bullet($character, $indent: 1.5em) {
     margin-left: $indent;
