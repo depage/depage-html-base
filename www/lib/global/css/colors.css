@@ -1,17 +1,1 @@
-/* {{{ global */
-body {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* }}} */
-/* {{{ mixin color() */
-/* }}} */
-/* {{{ orange */
-.color_orange h1,
-.color_orange a {
-  color: #f68b2f;
-}
-
-/* }}} */
-/* vim:set ft=scss sw=4 sts=4 fdm=marker : */
+body{background-color:#ffffff;color:#000000}.color_orange h1,.color_orange a{color:#f68b2f}
