@@ -46,10 +46,10 @@ var projectName = (function() {
     return localJS;
 })();
 
-// {{{ register events
+// {{{ registeroevents
 $(document).ready(function() {
     projectName.ready();
 });
 // }}}
     
-/* vim:set ft=javascript sw=4 sts=4 fdm=marker : */
+// vim:set ft=javascript sw=4 sts=4 fdm=marker : 

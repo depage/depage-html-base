@@ -1,4 +1,4 @@
-/* {{{ global */
+// {{{ global 
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +9,15 @@ html {
 body {
     font-size: 62.5%;
 }
+img {
+    display: block;
+}
 .invisible {
     visibility: hidden;
 }
 .hidden {
     display: none; 
 }
-/* }}} */
+// }}} 
 
 // vim:set ft=scss sw=4 sts=4 fdm=marker :

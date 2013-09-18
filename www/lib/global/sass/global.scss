@@ -3,7 +3,7 @@
 @import "mixins/_mixins";
 @import "mixins/_sizebox";
 
-/* {{{ global */
+// {{{ global 
 html, body {
     height: auto !important;
     height: 100%;
@@ -12,18 +12,17 @@ html, body {
 a img {
     border: none;
 }
-img {
-    display: block;
-}
+// }}}
+// {{{ fonts
 body, 
 input, 
 textarea, 
 button {
     font-family: "Arial", "Helvetica Neue", "Helvetica", Sans-Serif;
 }
-/* }}} */
+// }}} 
 
-/* {{{ header */
+// {{{ header 
 header {
     #logo a {
     }
@@ -34,18 +33,18 @@ header {
     #logo span.slogan {
     }
 }
-/* }}} */
+// }}} 
 
-/* {{{ section */
+// {{{ section 
 section {
 }
-/* }}} */
-/* {{{ article */
+// }}} 
+// {{{ article 
 article {
 }
-/* }}} */
+// }}} 
 
-/* {{{ footer */
+// {{{ footer 
 footer {
     clear: both;
 
@@ -53,17 +52,17 @@ footer {
         display: none;
     }
 }
-/* }}} */
+// }}} 
 
 @media screen and (max-width: 480px) {
-    /* {{{ global */
+    // {{{ global 
     body {
     }
-    /* }}} */
-    /* {{{ navigation */
+    // }}} 
+    // {{{ navigation 
     nav {
     }
-    /* }}} */
+    // }}} 
 }
 
-/* vim:set ft=scss sw=4 sts=4 fdm=marker : */
+// vim:set ft=scss sw=4 sts=4 fdm=marker : 
