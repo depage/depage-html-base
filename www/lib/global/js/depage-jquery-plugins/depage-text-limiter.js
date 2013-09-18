@@ -1,5 +1,5 @@
 /**
- * @require framework/shared/jquery-1.4.2.js
+ * @require framework/shared/jquery-1.8.3.js
  * 
  * @file    depage-text-limiter
  *
@@ -87,9 +87,6 @@
         base.filter = function(e) {
             var val = base.$el.val();
             if (val.length >= base.options.max) {
-                if (e) {
-                    e.preventDefault();
-                }
                 val = val.substr(0, base.options.max);
                 base.$el.val(val);
             }
