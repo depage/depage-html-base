@@ -4,16 +4,16 @@
     $value: $speed ease-out;
 
     -webkit-transition: $value;
-    -moz-transition: $value;
-    -ms-transition: $value;
-    -o-transition: $value;
-    transition: $value;
-
     -webkit-transition-property: $property;
+    -moz-transition: $value;
     -moz-transition-property: $property;
+    -ms-transition: $value;
     -ms-transition-property: $property;
+    -o-transition: $value;
     -o-transition-property: $property;
+    transition: $value;
     transition-property: $property;
+
 }
 @mixin transform($value){
     -webkit-transform: $value;
