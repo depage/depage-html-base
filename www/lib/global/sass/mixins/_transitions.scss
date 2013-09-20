@@ -1,6 +1,4 @@
-@mixin transition($speed: 500ms){
-    // property duration timing-function delay
-    $property: background, color, border, opacity, transform, font-size;
+@mixin transition($speed: 500ms, $property: "background, color, border, opacity, transform, font-size"){
     $value: $speed ease-out;
 
     -webkit-transition: $value;
