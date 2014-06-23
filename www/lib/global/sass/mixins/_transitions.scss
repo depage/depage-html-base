@@ -1,30 +1,26 @@
+@import "_prefixer";
+
 @mixin transition($speed: 500ms, $property: "background, color, border, opacity, transform, font-size"){
     $property: unquote($property);
     $value: $speed ease-out;
 
-    -webkit-transition: $value;
-    -webkit-transition-property: $property;
-    -moz-transition: $value;
-    -moz-transition-property: $property;
-    -ms-transition: $value;
-    -ms-transition-property: $property;
-    -o-transition: $value;
-    -o-transition-property: $property;
-    transition: $value;
-    transition-property: $property;
-
+    @include prefixer(transition, $value, webkit moz ms o spec);
+    @include prefixer(transition-property, $value, webkit moz ms o spec);
 }
 @mixin transform($value){
-    -webkit-transform: $value;
-    -moz-transform: $value;
-    -ms-transform: $value;
-    transform: $value;
+    @include prefixer(transform, $value, webkit moz ms o spec);
 }
 @mixin transform-origin($value){
-    -webkit-transform-origin: $value;
-    -moz-transform-origin: $value;
-    -ms-transform-origin: $value;
-    transform-origin: $value;
+    @include prefixer(transform-orign, $value, webkit moz ms o spec);
+}
+@mixin rotate($degree, $origin: 50% 50%) {
+    @include transform(rotate($degree));
+    @include transform-origin($origin);
+}
+@mixin skew($degreeX, $degreeY, $origin: 50% 50%) {
+    @include transform(skewX($degreeX));
+    @include transform(skewY($degreeY));
+    @include transform-origin($origin);
 }
 
 /* vim:set ft=scss sw=4 sts=4 fdm=marker : */
