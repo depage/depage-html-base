@@ -1,7 +1,7 @@
 /**
  * @file    js/global.js
  *
- * copyright (c) 2006-2013 Frank Hellenkamp [jonas@depage.net]
+ * copyright (c) 2006-2014 Frank Hellenkamp [jonas@depage.net]
  *
  * @author    Frank Hellenkamp [jonas@depage.net]
  */
@@ -13,7 +13,7 @@ var projectName = (function() {
 
     var lang = $('html').attr('lang');
 
-    // local Project instance that holds all variables and function
+    // local Project instance that holds all variables and public functions
     var localJS = {
         // {{{ ready
         ready: function() {
@@ -30,13 +30,13 @@ var projectName = (function() {
             localJS.setupVarious();
         },
         // }}}
-        // {{{ setup
+        // {{{ setupVarious
         setupVarious: function() {
             // add click event for teaser
             $(".teaser").click( function() {
                 document.location = $("a", this)[0].href;
             });
-            
+
             // email antispam
             $("a[href*='mailto:']").depageAntispam();
         }
@@ -46,10 +46,10 @@ var projectName = (function() {
     return localJS;
 })();
 
-// {{{ registeroevents
+// {{{ register ready event
 $(document).ready(function() {
     projectName.ready();
 });
 // }}}
-    
-// vim:set ft=javascript sw=4 sts=4 fdm=marker : 
+
+// vim:set ft=javascript sw=4 sts=4 fdm=marker :

@@ -1,23 +1,23 @@
-// {{{ global 
+// {{{ global
 body {
     background-color: #ffffff;
     color: #000000;
 }
-// }}} 
+// }}}
 
-// {{{ mixin color() 
+// {{{ mixin color()
 @mixin color($name, $basecolor, $lightcolor) {
     .color_#{$name} {
-        h1, 
+        h1,
         a {
             color: $basecolor;
         }
     }
 }
-// }}} 
+// }}}
 
-// {{{ orange 
+// {{{ orange
 @include color($name: "orange", $basecolor: #f68b2f, $lightcolor: #fff4ea);
-// }}} 
+// }}}
 
-// vim:set ft=scss sw=4 sts=4 fdm=marker : 
+// vim:set ft=scss sw=4 sts=4 fdm=marker :

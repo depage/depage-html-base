@@ -1,0 +1,11 @@
+RewriteCond         %{REQUEST_FILENAME}   !-s
+RewriteRule         ^(?!lib/cache/graphics)(.*)\.(jpg|jpeg|png|gif)\.([^/]*)\.(jpg|jpeg|png|gif)$ /lib/cache/graphics/$0
+
+RewriteCond         %{REQUEST_FILENAME}   !-s
+RewriteRule         ^lib/cache/graphics/(.*)\.(jpg|jpeg|png|gif)\.([^/]*)\.(jpg|jpeg)$ /lib/global/getimage.php [T=image/jpeg]
+
+RewriteCond         %{REQUEST_FILENAME}   !-s
+RewriteRule         ^lib/cache/graphics/(.*)\.(jpg|jpeg|png|gif)\.([^/]*)\.(png)$ /lib/global/getimage.php [T=image/png]
+
+RewriteCond         %{REQUEST_FILENAME}   !-s
+RewriteRule         ^lib/cache/graphics/(.*)\.(jpg|jpeg|png|gif)\.([^/]*)\.(gif)$ /lib/global/getimage.php [T=image/gif]

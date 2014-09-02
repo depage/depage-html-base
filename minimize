@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+    require_once("/Users/jonas/Opensource/depage-cms/www/framework/depage/depage.php");
+
+    // minify javascript
+    $jsmin = \depage\jsmin\jsmin::factory(array(
+        'extension' => "closureApi",
+    ));
+
+    $src = $jsmin->minifyFiles("global.min.js", array(
+        "www/lib/global/js/jquery-1.9.1.min.js",
+        "www/lib/global/js/depage-jquery-plugins/depage-email-antispam.js",
+        "www/lib/global/js/depage-jquery-plugins/depage-social.js",
+        "www/lib/global/js/depage-jquery-plugins/depage-slideshow.js",
+        "www/lib/global/js/global.js",
+        "www/lib/global/js/picturefill.js",
+    ));
+    file_put_contents("www/lib/global/js/global.min.js", $src);
+
+// vim:set ft=php sw=4 sts=4 fdm=marker :
