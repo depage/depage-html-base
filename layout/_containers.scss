@@ -15,17 +15,35 @@
 // }}}
 
 // {{{ mixin: split-horizontal()
-@mixin split-horizontal($count, $spacing: 0) {
-    @for $i from 1 through $count {
-        & {
-            border-right: $spacing solid transparent;
+@mixin split-horizontal($count, $spacing: 0, $reorderWidth: 0px) {
+    & {
+        display: block;
+        float: left;
+        border-left: $spacing * 0.5 solid transparent;
+        border-right: $spacing * 0.5 solid transparent;
+    }
+    &:first-child {
+        margin-left: - $spacing * 0.5;
+        @media screen and (max-width: $reorderWidth) {
+            margin-left: 0;
         }
-        &:last-child {
-            border-right: none;
+    }
+    &:last-child {
+        margin-right: - $spacing * 0.5;
+        @media screen and (max-width: $reorderWidth) {
+            margin-right: 0;
         }
+    }
 
+    @for $i from 1 through $count {
         &.split-#{$i}of#{$count} {
             width: (100% / $count * $i);
+
+            @media screen and (max-width: $reorderWidth) {
+                border-right: none;
+                border-left: none;
+                width: 100%;
+            }
         }
     }
 }
