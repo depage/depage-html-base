@@ -1,4 +1,5 @@
 @import "helper/_prefixer";
+@import "helper/_functions";
 @import "helper/_various";
 @import "helper/_fonts";
 
@@ -10,6 +11,7 @@
 @import "css3/_shadows";
 @import "css3/_animation";
 @import "css3/_transitions";
+@import "css3/_progress";
 
 @import "layout/_bullets";
 @import "layout/_containers";

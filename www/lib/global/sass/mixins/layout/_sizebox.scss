@@ -8,13 +8,19 @@
     h2,
     h3,
     p,
-    li {
+    li,
+    dt,
+    dd {
         font-size: #{$size}em;
         line-height: #{$lineHeight}em;
     }
-    li {
+    li,
+    dt,
+    dd {
+        p
         li,
-        p {
+        dt,
+        dd {
             font-size: 1em;
             margin-bottom: 0;
         }
