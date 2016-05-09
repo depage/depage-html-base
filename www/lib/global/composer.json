@@ -1,0 +1,23 @@
+{
+    "name": "projectName",
+    "description": "Local php files for projectName",
+    "require": {
+        "depage/db": "dev-master",
+        "depage/formatters": "dev-master",
+        "depage/graphics": "dev-master",
+        "depage/htmlform": "dev-master",
+        "depage/mail": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "projectName\\": "php" }
+    },
+     "config": {
+        "vendor-dir": "php"
+    },
+    "authors": [
+        {
+            "name": "Frank Hellenkamp",
+            "email": "jonas@depage.net"
+        }
+    ]
+}
