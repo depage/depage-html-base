@@ -2,6 +2,7 @@
 @mixin centeredcontainer($width) {
     position: relative;
     width: $width;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
 }

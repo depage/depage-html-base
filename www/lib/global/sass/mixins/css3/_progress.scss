@@ -4,8 +4,6 @@
         @include prefixer (appearance, none, webkit moz spec);
 
         overflow: hidden;
-        height: 1em;
-        width: 6em;
         background: $colorBack;
         position: relative;
         @content;
